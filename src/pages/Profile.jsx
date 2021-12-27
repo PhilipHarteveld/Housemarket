@@ -27,7 +27,7 @@ function Profile() {
         await updateProfile(auth.currentUser, {
           displayName: name,
         });
-        const userRef = doc(db, "users".auth.currentUser.uid);
+        const userRef = doc(db, "users", auth.currentUser.uid);
         await updateDoc(userRef, {
           name,
         });
